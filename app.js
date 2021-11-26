@@ -18,7 +18,7 @@ var completedTasksHolder=document.getElementById("completed");//completed-tasks
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
-    listItem.classList.add("task-item")
+    listItem.classList.add("task-list__item")
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
@@ -46,7 +46,7 @@ var createNewTaskElement=function(taskString){
     editButton.classList = "button button-edit"
 
     deleteButton.classList = "button button-delete"
-    deleteButtonImg.classList.add("button-delete--image")
+    deleteButtonImg.classList.add("button-delete__image")
     deleteButtonImg.src='./remove.svg';
     deleteButtonImg.alt=""
     deleteButton.appendChild(deleteButtonImg);
@@ -89,7 +89,7 @@ var editTask=function(){
     var editInput=listItem.querySelector('.task-input');
     var label=listItem.querySelector(".task-title");
     var editBtn=listItem.querySelector(".button-edit");
-    var containsClass=listItem.classList.contains("edit-mode");
+    var containsClass=listItem.classList.contains("task-list__item--edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -103,7 +103,7 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("edit-mode");
+    listItem.classList.toggle("task-list__item--edit-mode");
 };
 
 
