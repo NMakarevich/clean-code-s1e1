@@ -41,10 +41,12 @@ body {
   margin: 0;
   padding: 0px;
 }
-.task-item, .task-list--title {
+.task-item, 
+.task-list--title {
   list-style: none;
 }
-.task-input, .button{
+.task-input, 
+.button{
   outline: none;
 }
 .button {
